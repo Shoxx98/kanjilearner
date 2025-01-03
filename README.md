@@ -19,7 +19,7 @@ I/Me/Myself,私,0,0
 - only set the english and the japanese vocabulary, set the last entries to 0 every time you create a row.
 - dont add a space character after commas
 - if the english vocabulary cell contains a space, it will automatically be surrounded with `"` characters. you dont need to add those yourself.
-### change how many kanji you want to allow a vocabulary word to contain
+### change how many kanji & kana characters you want to allow a vocabulary word to contain
 - in `src/mainwindow.h` change CANVAS_COUNT to any value you want. On a scaled 28" 4k Display the max feels to be at around 7.
 ### compile
 on arch:
