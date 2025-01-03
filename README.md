@@ -4,8 +4,10 @@ I am not a professional QT dev of any kind, this was meant as a small and fast Q
 QT6 App for practicing how to write kanji using wacom tablets on Linux and a self-defined csv file for vocabulary you want to learn
 
 # How to use
-### get a graphics tablet
-- the app uses the canvastablet example from qt for the drawing fields, which should™ work with any usb wacom tablet like the intuos small
+### set up a graphics tablet
+- the app uses the [canvastablet example](https://doc.qt.io/qt-6/qtwidgets-widgets-tablet-example.html) from qt for the drawing fields, which should™ work with any usb wacom tablet like the intuos small
+- follow the setup [here](https://wiki.archlinux.org/title/Graphics_tablet)
+- if you get a graphics tablet that is big enough, or use it only on one display, you can probably stay on wayland. If not, you would probably want to switch to a DM/WM that uses xorg instead of wayland, because the size of the tablet will not be enough for you to write something as detailed as kanji and you will not be able to constrain the display area the graphicstablet is mapped to to one screen easily.
 ### create a list of vocabulary
 - change FILEPATH in src/CSVInteraction.h to the absolute filepath you want to store your list of vocabulary
 - for the contents: use this as your template:
