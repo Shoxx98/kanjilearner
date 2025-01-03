@@ -37,3 +37,5 @@ on arch:
 - click next for loading the first entry in the csv
 - read the english vocabulary name on the top of the GUI
 - draw the kanji
+- click "show solution"
+- manually check if you drew the kanji correctly. I would recommend looking up how to draw the kanji on jisho.
