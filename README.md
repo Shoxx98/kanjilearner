@@ -39,7 +39,7 @@ on arch:
 `./kanjilearner`
 ### how to use the GUI
 - at any point you can click "clear canvas" to clear all drawing areas
-- click "next" for loading the first entry in the csv
+- click "next" for loading a semi-randomly chosen entry in the csv
 - read the english vocabulary name on the top of the GUI
 - draw the kanji
 - click "show solution"
