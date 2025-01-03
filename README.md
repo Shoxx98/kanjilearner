@@ -15,6 +15,10 @@ QT6 App for practicing how to write kanji using wacom tablets on Linux and a sel
 English,Japanese,lastTimePracticedSuccessfully,timesPracticedSuccessfully
 I/Me/Myself,私,0,0
 ```
+- only set the english and japanese fields
+- seperate the rows with linebreaks and the columns with commas
+- only set the english and the japanese vocabulary, set the last entries to 0 every time.
+- if the english vocabulary cell contains a space, it will automatically be surrounded with `"` characters. you dont need to add those yourself.
 ### change how many kanji you want to allow a vocabulary word to contain
 - in `src/mainwindow.h` change CANVAS_COUNT to any value you want. On a scaled 28" 4k Display the max feels to be at around 7.
 ### compile
