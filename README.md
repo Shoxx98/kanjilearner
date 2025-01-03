@@ -16,7 +16,7 @@ English,Japanese,lastTimePracticedSuccessfully,timesPracticedSuccessfully
 I/Me/Myself,私,0,0
 ```
 - seperate the rows with linebreaks and the columns with commas
-- only set the english and the japanese vocabulary, set the last entries to 0 every time.
+- only set the english and the japanese vocabulary, set the last entries to 0 every time you create a row.
 - dont add a space character after commas
 - if the english vocabulary cell contains a space, it will automatically be surrounded with `"` characters. you dont need to add those yourself.
 ### change how many kanji you want to allow a vocabulary word to contain
