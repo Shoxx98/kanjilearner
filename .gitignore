@@ -1,1 +1,4 @@
 *autosave.xopp
+.cache
+build/*
+images
