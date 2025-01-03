@@ -3,6 +3,9 @@ I am not a professional QT dev of any kind, this was meant as a small and fast Q
 # kanjilearner
 QT6 App for practicing how to write kanji using wacom tablets on Linux and a self-defined csv file for vocabulary you want to learn
 
+![image](https://github.com/user-attachments/assets/19fef321-5193-4b61-8e19-b64e82463337)
+
+
 # How to use
 ### set up a graphics tablet
 - the app uses the [canvastablet example](https://doc.qt.io/qt-6/qtwidgets-widgets-tablet-example.html) from qt for the drawing fields, which should™ work with any usb wacom tablet like the intuos small
