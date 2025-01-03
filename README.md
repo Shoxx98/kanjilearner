@@ -1,3 +1,5 @@
+# ABSOLUTELY DO NOT USE THIS ON YOUR WORK PC
+I am not a professional QT dev of any kind, this was meant as a small and fast QT project for me to get into learning kanji. The TabletCanvas class seems to have some memory issues which are likely exploitable.
 # kanjilearner
 QT6 App for practicing how to write kanji using wacom tablets on Linux and a self-defined csv file for vocabulary you want to learn
 
