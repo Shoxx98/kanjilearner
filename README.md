@@ -38,4 +38,4 @@ on arch:
 - read the english vocabulary name on the top of the GUI
 - draw the kanji
 - click "show solution"
-- manually check if you drew the kanji correctly. I would recommend looking up how to draw the kanji on jisho.
+- manually check if you drew the kanji correctly. I would recommend looking up how to draw the kanji on [jisho.org](https://jisho.org/search/%E7%A7%81%20%23kanji) (see the stroke order section).
