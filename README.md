@@ -15,7 +15,6 @@ QT6 App for practicing how to write kanji using wacom tablets on Linux and a sel
 English,Japanese,lastTimePracticedSuccessfully,timesPracticedSuccessfully
 I/Me/Myself,私,0,0
 ```
-- only set the english and japanese fields
 - seperate the rows with linebreaks and the columns with commas
 - only set the english and the japanese vocabulary, set the last entries to 0 every time.
 - if the english vocabulary cell contains a space, it will automatically be surrounded with `"` characters. you dont need to add those yourself.
