@@ -43,3 +43,5 @@ on arch:
 - draw the kanji
 - click "show solution"
 - manually check if you drew the kanji correctly. I would recommend looking up how to draw the kanji on [jisho.org](https://jisho.org/search/%E7%A7%81%20%23kanji) (see the stroke order section).
+- click "knew the solution" if you think you got it right. this automatically chooses another entry in the csv and marks the entry as recently pracitced.
+- click "next" if you do not think you got it right
