@@ -11,10 +11,17 @@ I/Me/Myself,私,0,0
 ```
 ### compile
 on arch:
+
 `yay -S cmake rapidcsv qt6-main`
+
 `cd $YOUR_GIT_CLONE_DIR`
+
 `mkdir build`
+
 `cd build`
+
 `cmake ../CMakeLists.txt`
+
 `make`
+
 `./kanjilearner`
