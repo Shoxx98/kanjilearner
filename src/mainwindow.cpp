@@ -31,7 +31,7 @@ MainWindow *ptr;
 MainWindow::MainWindow(){
     lay = new QGridLayout(&central_widget);
 
-    // resize(1500,800);
+    resize(1500,800);
 
     ptr = this;
 
@@ -86,6 +86,7 @@ MainWindow::MainWindow(){
     setCentralWidget(&central_widget);
     show();
 }
+
 
 void MainWindow::handleButtonNext(){
 

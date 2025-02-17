@@ -25,6 +25,7 @@ public:
     MainWindow();
 
 private slots:
+
     static void handleButtonNext();
     static void handleButtonResolve();
     static void handleKnownButton();
