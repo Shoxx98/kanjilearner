@@ -1,3 +1,12 @@
+/**
+ * File              : tabletcanvas.h
+ * License           : see LICENSE.txt in the root dir. If there is none, it's GPLv3
+ * Author            : Jonas Gilbricht <jonas.g.jobs@gmail.com>
+ * Date              : 28.08.2026
+ * Last Modified Date: 28.08.2026
+ * Last Modified By  : Jonas Gilbricht <jonas.g.jobs@gmail.com>
+ * Copyright (c) 2026 Jonas Gilbricht
+ */
 // Copyright (C) 2016 The Qt Company Ltd.
 // SPDX-License-Identifier: LicenseRef-Qt-Commercial OR BSD-3-Clause
 
@@ -18,37 +27,49 @@ class QString;
 QT_END_NAMESPACE
 
 //! [0]
-class TabletCanvas : public QWidget
-{
+class TabletCanvas : public QWidget {
     Q_OBJECT
 
-public:
-    enum Valuator { PressureValuator, TangentialPressureValuator,
-                    TiltValuator, VTiltValuator, HTiltValuator, NoValuator };
+  public:
+    enum Valuator {
+        PressureValuator,
+        TangentialPressureValuator,
+        TiltValuator,
+        VTiltValuator,
+        HTiltValuator,
+        NoValuator
+    };
     Q_ENUM(Valuator)
 
     TabletCanvas();
 
     void clear();
-    void setAlphaChannelValuator(Valuator type)
-        { m_alphaChannelValuator = type; }
-    void setColorSaturationValuator(Valuator type)
-        { m_colorSaturationValuator = type; }
-    void setLineWidthType(Valuator type)
-        { m_lineWidthValuator = type; }
-    void setColor(const QColor &c)
-        { if (c.isValid()) m_color = c; }
-    QColor color() const
-        { return m_color; }
-    void setTabletDevice(QTabletEvent *event)
-        { updateCursor(event); }
 
-protected:
+    void setAlphaChannelValuator(Valuator type) {
+        m_alphaChannelValuator = type;
+    }
+
+    void setColorSaturationValuator(Valuator type) {
+        m_colorSaturationValuator = type;
+    }
+
+    void setLineWidthType(Valuator type) { m_lineWidthValuator = type; }
+
+    void setColor(const QColor &c) {
+        if (c.isValid())
+            m_color = c;
+    }
+
+    QColor color() const { return m_color; }
+
+    void setTabletDevice(QTabletEvent *event) { updateCursor(event); }
+
+  protected:
     void tabletEvent(QTabletEvent *event) override;
     void paintEvent(QPaintEvent *event) override;
     void resizeEvent(QResizeEvent *event) override;
 
-private:
+  private:
     void initPixmap();
     void paintPixmap(QPainter &painter, QTabletEvent *event);
     Qt::BrushStyle brushPattern(qreal value);
@@ -56,10 +77,10 @@ private:
     void updateBrush(const QTabletEvent *event);
     void updateCursor(const QTabletEvent *event);
 
-    Valuator m_alphaChannelValuator = TangentialPressureValuator;
+    Valuator m_alphaChannelValuator    = TangentialPressureValuator;
     Valuator m_colorSaturationValuator = NoValuator;
-    Valuator m_lineWidthValuator = PressureValuator;
-    QColor m_color = Qt::black;
+    Valuator m_lineWidthValuator       = PressureValuator;
+    QColor m_color                     = Qt::black;
     QPixmap m_pixmap;
     QBrush m_brush;
     QPen m_pen;
@@ -71,6 +92,7 @@ private:
         qreal rotation = 0;
     } lastPoint;
 };
+
 //! [0]
 
 #endif
