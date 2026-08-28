@@ -1,0 +1,15 @@
+# https://clang.llvm.org/docs/ClangFormatStyleOptions.html
+# BasedOnStyle: GNU
+IndentWidth: 4
+# MaxEmptyLinesToKeep: 1
+
+# for :AddHeader neovim command which goes over 
+# you technically only need one
+# OneLineFormatOffRegex: ( \* (File|Author|License|Date|Last|Copyright))
+# AlignConsecutiveAssignments: Consecutive
+# AlignConsecutiveMacros: Consecutive
+# SeparateDefinitionBlocks: Always
+# KeepEmptyLines:
+#   AtEndOfFile: false
+#   AtStartOfBlock: false
+#   AtStartOfFile: false
