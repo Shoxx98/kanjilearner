@@ -93,7 +93,7 @@ MainWindow::MainWindow() {
 }
 
 void MainWindow::handleButtonNext() {
-    ptr->csventry = ptr->csv.overwriteCurrentCSVEntry();
+    ptr->csventry = ptr->csv.overwriteCurrentVocab();
     ptr->vocabDisplay.setText(ptr->csventry.vocabularyEnglish.c_str());
 
     ptr->clearCanvas();
@@ -105,8 +105,8 @@ void MainWindow::handleButtonNext() {
             ptr->kanjiFieldArr[i].setText(
                 QString(ptr->csventry.vocabularyJapanese.c_str())[i]);
         }
-        // QString wraps around while counting, so we need to handle the rest in
-        // one swoop
+        // QString wraps around while counting, so we need to handle the rest
+        // in one swoop
         else {
             for (size_t j = i; j < CANVAS_COUNT; j++) {
                 ptr->kanjiFieldArr[j].setText("");
@@ -133,6 +133,6 @@ void MainWindow::handleButtonResolve() {
 
 void MainWindow::handleKnownButton() {
     ptr->csv.raiseSomeCSVEntry();
-    ptr->csv.overwriteCurrentCSVEntry();
+    ptr->csv.overwriteCurrentVocab();
     ptr->handleButtonNext();
 }
