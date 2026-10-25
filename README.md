@@ -11,9 +11,12 @@ QT6 App for practicing how to write kanji using wacom tablets on Linux and a sel
 - the app uses the [canvastablet example](https://doc.qt.io/qt-6/qtwidgets-widgets-tablet-example.html) from qt for the drawing fields, which should™ work with any usb wacom tablet like the intuos small
 - follow the setup [here](https://wiki.archlinux.org/title/Graphics_tablet)
 - if you get a graphics tablet that is big enough, or use it only on one display, you can probably stay on wayland. If not, you would probably want to switch to a DM/WM that uses xorg instead of wayland, because the size of the tablet will not be enough for you to write something as detailed as kanji and you will not be able to constrain the display area the graphicstablet is mapped to to one screen easily.
-### create a list of vocabulary
+### creation of userdata 
+#### less manual
+- execute the bash script to copy sample files to the correct directory
+#### more manual
 - change FILEPATH in src/CSVInteraction.h to the absolute filepath you want to store your list of vocabulary
-- for the contents: use this as your template:
+- for the contents : use this as your template:
 ```
 English,Japanese,lastTimePracticedSuccessfully,timesPracticedSuccessfully
 I/Me/Myself,私,0,0
@@ -22,6 +25,8 @@ I/Me/Myself,私,0,0
 - only set the english and the japanese vocabulary, set the last entries to 0 every time you create a row.
 - dont add a space character after commas
 - if the english vocabulary cell contains a space, it will automatically be surrounded with `"` characters. you dont need to add those yourself.
+### swapping the used csv
+- change the target of the symlink `vocablist.csv` or just overwrite the contents of the file
 ### change how many kanji & kana characters you want to allow a vocabulary word to contain
 - in `src/mainwindow.h` change CANVAS_COUNT to any value you want. On a scaled 28" 4k Display the max feels to be at around 7.
 ### compile
