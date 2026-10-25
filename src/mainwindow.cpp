@@ -93,8 +93,15 @@ MainWindow::MainWindow() {
 }
 
 void MainWindow::handleButtonNext() {
-    ptr->csventry = ptr->csv.overwriteCurrentVocab();
-    ptr->vocabDisplay.setText(ptr->csventry.vocabularyEnglish.c_str());
+    ptr->csventry            = ptr->csv.overwriteCurrentVocab();
+    std::string currentVocab = ptr->csventry.vocabularyEnglish;
+    unsigned int character_length_for_newline = 20;
+    if (currentVocab.size() > character_length_for_newline) {
+        character_length_for_newline =
+            currentVocab.find(";", character_length_for_newline);
+        currentVocab.insert(character_length_for_newline + 1, " \r\n ");
+    }
+    ptr->vocabDisplay.setText(currentVocab.c_str());
 
     ptr->clearCanvas();
 
